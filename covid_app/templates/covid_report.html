@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COVID-19 India Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #1f2937;
+    }
+
+    .total {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      color: #d9534f;
+    }
+
+    .search-bar {
+      text-align: right;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px 15px;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    th {
+      background-color: #343a40;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f1f3f5;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>COVID-19 India Report</h1>
+      <div class="total">Total Confirmed: {{total_cases }}</div>
+    </div>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by location..."
+        onkeyup="filterTable()"
+      />
+    </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Confirmed (Indian)</th>
+          <th>Discharged</th>
+          <th>Deaths</th>
+          <th>Total Confirmed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td data-label="Location">{{ row.loc }}</td>
+          <td data-label="Confirmed (Indian)">{{ row.confirmedCasesIndian }}</td>
+          <td data-label="Discharged">{{ row.discharged }}</td>
+          <td data-label="Deaths">{{ row.deaths }}</td>
+          <td data-label="Total Confirmed">{{ row.totalConfirmed }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function filterTable() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const rows = document.querySelectorAll("tbody tr");
+
+      rows.forEach(row => {
+        const location = row.querySelector("td").textContent.toLowerCase();
+        row.style.display = location.includes(filter) ? "" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
