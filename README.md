@@ -23,10 +23,10 @@ A real-time web dashboard built using **Django** and data from the [Rootnet API]
 - ⚙️ Bootstrap (optional for styling)
 
 ---
+## 📸 Screenshot
 
-## 📸 Demo Screenshot
+![COVID Dashboard Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/screenshot.png?raw=true)
 
-![COVID Dashboard Screenshot](screenshot.png)
 
 ---
 
