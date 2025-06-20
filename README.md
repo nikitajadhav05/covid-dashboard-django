@@ -44,17 +44,28 @@ python manage.py runserver
 
 
 
-📁 Folder Structure
-
+## 📁 Folder Structure
 Covid_Report/
-│
-├── covid_app/                # Django app
-│   ├── templates/            # HTML templates
-│   └── views.py              # Main logic for API call + data rendering
-│
-├── Covid_Report/             # Project settings
-├── db.sqlite3                # Local DB
-└── manage.py
+├── covid_app/
+│ ├── migrations/ # DB migrations
+│ ├── static/ # Static files (CSS, JS, etc.)
+│ ├── templates/ # HTML templates
+│ ├── admin.py # Django admin config
+│ ├── models.py # Database models
+│ ├── urls.py # URL routing for app
+│ └── views.py # Logic for API and data rendering
+├── Covid_Report/
+│ ├── init.py
+│ ├── settings.py # Django settings
+│ ├── urls.py # URL routing (project level)
+│ └── wsgi.py # WSGI entry point
+├── db.sqlite3 # SQLite database file
+├── manage.py # Django CLI entry point
+└── screenshot.png # Project screenshot for README
+
+
+
+
 
 
 📌 Purpose
