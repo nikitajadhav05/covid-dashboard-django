@@ -25,7 +25,11 @@ A real-time web dashboard built using **Django** and data from the [Rootnet API]
 ---
 ## 📸 Screenshot
 
-![COVID Dashboard Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/screenshot.png?raw=true)
+Login Page
+![Login Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/LOGINscreenshot.png?raw=true)
+
+Dashboard Page
+![Dashboard Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/DASHBOARDscreenshot.png?raw=true)
 
 
 ---
