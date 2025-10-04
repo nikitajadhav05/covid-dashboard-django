@@ -49,7 +49,7 @@ See the dashboard in action! 🎬
        alt="COVID Dashboard Demo" width="700">
 </p>
 
----
+
 ---
 
 ## 🚀 How to Run Locally
