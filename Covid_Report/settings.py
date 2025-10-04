@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-fw@ms50qn568hg)2syvge!-9%k$chvo1dnt+11+!%%4u&@r&%h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['covid-report-83tp.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'covid-report-83tp.onrender.com']
+
 
 
 
@@ -56,7 +57,8 @@ ROOT_URLCONF = 'Covid_Report.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +124,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = '/covidReport/'
+LOGOUT_REDIRECT_URL = '/'
+
