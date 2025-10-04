@@ -23,15 +23,33 @@ A real-time web dashboard built using **Django** and data from the [Rootnet API]
 - ⚙️ Bootstrap (optional for styling)
 
 ---
-## 📸 Screenshot
 
-Login Page
-![Login Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/LOGINscreenshot.png?raw=true)
+## 📸 Screenshots
 
-Dashboard Page
-![Dashboard Screenshot](https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/DASHBOARDscreenshot.png?raw=true)
+### Login Page
+<p align="center">
+  <img src="https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/Assets/img/LOGINscreenshot.png?raw=true" 
+       alt="Login Screenshot" width="600">
+</p>
 
+### Dashboard Page
+<p align="center">
+  <img src="https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/Assets/img/DASHBOARDscreenshot.png?raw=true" 
+       alt="Dashboard Screenshot" width="700">
+</p>
 
+---
+
+## 🎥 Demo Video
+
+See the dashboard in action! 🎬
+
+<p align="center">
+  <img src="https://github.com/nikitajadhav05/covid-dashboard-django/blob/main/Assets/gif/Covid_Report.gif?raw=true" 
+       alt="COVID Dashboard Demo" width="700">
+</p>
+
+---
 ---
 
 ## 🚀 How to Run Locally
